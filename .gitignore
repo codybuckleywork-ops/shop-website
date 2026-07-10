@@ -1,0 +1,14 @@
+# local data — never commit the shop's live database or settings
+dashboard.db
+config.json
+tokens.json
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# os / editor
+.DS_Store
+Thumbs.db
