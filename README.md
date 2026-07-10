@@ -72,7 +72,7 @@ gunicorn -w 2 -b 0.0.0.0:5000 app:app
 to auto-start on login and opens the firewall port in one step.
 
 ## What's in the box
-
+t
 - **Job board (the main event)** — each job has a customer, a job name, a
   substrate, a due date, an optional install date, and a priority. It sits
   at exactly one pipeline stage at a time: Design, Print, Laminate, Cut,
