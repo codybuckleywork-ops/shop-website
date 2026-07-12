@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Sign Shop — Custom Signs, Banners & Vehicle Graphics | Hazel Green, AL</title>
+<meta name="description" content="Custom signs, banners, vehicle graphics, and installations in Hazel Green, Alabama. Design to install, done right.">
+<style>
+:root{
+  --ink:#101828;--ink2:#475467;--ink3:#98a2b3;--bg:#ffffff;--bg2:#f7f8fa;
+  --brand:#1d4ed8;--brand-dark:#1e3a8a;--accent:#f59e0b;--radius:14px;
+  --max:1080px;
+}
+*{box-sizing:border-box;margin:0}
+body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);line-height:1.6;background:var(--bg)}
+img{max-width:100%}
+a{color:var(--brand)}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid #eaecf0;z-index:10}
+.nav{display:flex;align-items:center;gap:24px;padding:14px 20px;max-width:var(--max);margin:0 auto}
+.logo{font-weight:800;font-size:19px;letter-spacing:-.02em;color:var(--ink);text-decoration:none}
+.logo span{color:var(--brand)}
+.nav a:not(.logo):not(.cta){color:var(--ink2);text-decoration:none;font-size:14.5px;font-weight:500}
+.nav a:hover:not(.logo):not(.cta){color:var(--ink)}
+.nav .spacer{flex:1}
+.cta{background:var(--brand);color:#fff;text-decoration:none;font-weight:600;font-size:14.5px;padding:9px 18px;border-radius:999px}
+.cta:hover{background:var(--brand-dark)}
+.hero{background:linear-gradient(160deg,#0b1220 0%,#1e3a8a 90%);color:#fff;padding:84px 20px 90px;text-align:center}
+.hero h1{font-size:clamp(30px,5.5vw,52px);font-weight:800;letter-spacing:-.03em;line-height:1.12;max-width:760px;margin:0 auto}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p{margin:18px auto 0;max-width:560px;font-size:18px;color:#c7d2fe}
+.hero .cta{display:inline-block;margin-top:30px;font-size:16px;padding:13px 30px;background:var(--accent);color:#0b1220}
+.hero .cta:hover{filter:brightness(1.08)}
+.hero .sub{margin-top:14px;font-size:13px;color:#93a4d8}
+section{padding:70px 0}
+section.alt{background:var(--bg2)}
+h2{font-size:clamp(24px,3.5vw,34px);font-weight:800;letter-spacing:-.02em;text-align:center}
+.lede{text-align:center;color:var(--ink2);max-width:620px;margin:12px auto 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:44px}
+.card{background:#fff;border:1px solid #eaecf0;border-radius:var(--radius);padding:26px;box-shadow:0 1px 2px rgba(16,24,40,.04)}
+.alt .card{box-shadow:0 1px 3px rgba(16,24,40,.07)}
+.card .ico{font-size:28px}
+.card h3{margin:12px 0 6px;font-size:17px}
+.card p{color:var(--ink2);font-size:14.5px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-top:44px;counter-reset:step}
+.step{background:#fff;border:1px solid #eaecf0;border-radius:var(--radius);padding:22px;position:relative}
+.step::before{counter-increment:step;content:counter(step);position:absolute;top:-14px;left:18px;background:var(--brand);color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px}
+.step h3{font-size:15.5px;margin:8px 0 4px}
+.step p{color:var(--ink2);font-size:13.5px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:44px}
+.shot{aspect-ratio:4/3;border-radius:var(--radius);background:linear-gradient(135deg,#e0e7ff,#f1f5f9);display:flex;align-items:center;justify-content:center;color:var(--ink3);font-size:13.5px;text-align:center;padding:12px;border:1px dashed #c7cede}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:44px;align-items:start}
+.contact-card{background:#fff;border:1px solid #eaecf0;border-radius:var(--radius);padding:28px}
+.contact-card h3{font-size:16px;margin-bottom:12px}
+.contact-card p{color:var(--ink2);font-size:14.5px;margin-bottom:8px}
+.contact-card strong{color:var(--ink)}
+form{display:flex;flex-direction:column;gap:12px}
+input,textarea,select{font:inherit;padding:11px 13px;border:1px solid #d0d5dd;border-radius:9px;width:100%}
+input:focus,textarea:focus,select:focus{outline:2px solid var(--brand);border-color:transparent}
+button{font:inherit;font-weight:600;background:var(--brand);color:#fff;border:none;border-radius:999px;padding:12px 24px;cursor:pointer}
+button:hover{background:var(--brand-dark)}
+.note{font-size:12.5px;color:var(--ink3)}
+footer{background:#0b1220;color:#93a4d8;padding:34px 20px;text-align:center;font-size:13.5px}
+footer a{color:#c7d2fe}
+.placeholder{background:#fef3c7;border:1px solid #fcd34d;border-radius:9px;padding:10px 14px;font-size:13px;color:#92400e;max-width:var(--max);margin:14px auto 0}
+@media(max-width:640px){
+  .nav{gap:14px;flex-wrap:wrap}
+  .nav a:not(.logo):not(.cta){font-size:13px}
+  section{padding:50px 0}
+}
+</style>
+</head>
+<body>
+
+<div class="placeholder">⚠ Placeholder site — replace "Your Sign Shop", the phone number, email, and photo boxes with your real info, then delete this banner (it's the div class="placeholder" at the top of the file).</div>
+
+<header>
+  <nav class="nav">
+    <a class="logo" href="#">Your <span>Sign</span> Shop</a>
+    <span class="spacer"></span>
+    <a href="#services">Services</a>
+    <a href="#work">Our Work</a>
+    <a href="#process">Process</a>
+    <a href="#contact">Contact</a>
+    <a class="cta" href="#contact">Get a Quote</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Signs that get your business <em>noticed</em></h1>
+  <p>Design, print, fabrication, and installation — all under one roof in Hazel Green, Alabama.</p>
+  <a class="cta" href="#contact">Request a Free Quote</a>
+  <div class="sub">Serving Hazel Green, Huntsville, and North Alabama</div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <h2>What we make</h2>
+    <p class="lede">From a single yard sign to a full storefront makeover — designed, produced, and installed by the same crew.</p>
+    <div class="grid">
+      <div class="card"><div class="ico">💡</div><h3>Illuminated &amp; Channel Letters</h3><p>Lighted cabinet signs and channel letters that work as hard at night as they do in the day.</p></div>
+      <div class="card"><div class="ico">🏪</div><h3>Storefront &amp; Building Signs</h3><p>ACM, aluminum, acrylic, and MDO signage built to handle Alabama weather.</p></div>
+      <div class="card"><div class="ico">🚚</div><h3>Vehicle Graphics &amp; Wraps</h3><p>Turn every truck in your fleet into a billboard with cut vinyl or full wraps.</p></div>
+      <div class="card"><div class="ico">🎪</div><h3>Banners &amp; Event Signage</h3><p>Grand openings, festivals, job sites — fast turnaround banners and coroplast signs.</p></div>
+      <div class="card"><div class="ico">🪟</div><h3>Window &amp; Wall Graphics</h3><p>Frosted vinyl, hours lettering, wall murals, and interior branding.</p></div>
+      <div class="card"><div class="ico">🔧</div><h3>Installation &amp; Service</h3><p>Licensed installs, sign repairs, and re-faces — including signs we didn't make.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="process">
+  <div class="wrap">
+    <h2>How it works</h2>
+    <p class="lede">The same pipeline we run in the shop, from your first call to the finished install.</p>
+    <div class="steps">
+      <div class="step"><h3>Talk to us</h3><p>Tell us what you need — we'll quote it fast and straight.</p></div>
+      <div class="step"><h3>Design &amp; proof</h3><p>You approve exactly what will be made. No surprises.</p></div>
+      <div class="step"><h3>Print &amp; fabricate</h3><p>Produced in-house on commercial equipment.</p></div>
+      <div class="step"><h3>Install</h3><p>We schedule around the weather and do it right the first time.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <h2>Recent work</h2>
+    <p class="lede">Swap these placeholders with photos of your installs — customers buy what they can see.</p>
+    <div class="gallery">
+      <div class="shot">📷 Photo: illuminated cabinet sign install</div>
+      <div class="shot">📷 Photo: fleet vehicle lettering</div>
+      <div class="shot">📷 Photo: storefront channel letters</div>
+      <div class="shot">📷 Photo: banner / event signage</div>
+      <div class="shot">📷 Photo: window graphics</div>
+      <div class="shot">📷 Photo: before &amp; after re-face</div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="contact">
+  <div class="wrap">
+    <h2>Get a quote</h2>
+    <p class="lede">Tell us about your project and we'll get back to you within one business day.</p>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <form action="mailto:codybuckleywork@gmail.com" method="get" enctype="text/plain">
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="text" name="phone" placeholder="Phone">
+          <input type="email" name="email" placeholder="Email" required>
+          <select name="type">
+            <option value="">What do you need?</option>
+            <option>Illuminated / channel letters</option>
+            <option>Storefront or building sign</option>
+            <option>Vehicle graphics / wrap</option>
+            <option>Banner or event signage</option>
+            <option>Window / wall graphics</option>
+            <option>Repair or install only</option>
+            <option>Something else</option>
+          </select>
+          <textarea name="details" rows="4" placeholder="Tell us about the project — size, location, timeline…"></textarea>
+          <button type="submit">Send quote request</button>
+          <p class="note">This opens your email app. For a real inline form, connect a free service like Formspree — one line to change.</p>
+        </form>
+      </div>
+      <div class="contact-card">
+        <h3>Visit or call</h3>
+        <p><strong>Your Sign Shop</strong><br>123 Main Street<br>Hazel Green, AL 35750</p>
+        <p><strong>Phone:</strong> (256) 555-0100<br><strong>Email:</strong> codybuckleywork@gmail.com</p>
+        <p><strong>Hours:</strong><br>Mon–Fri 8am–5pm<br>Sat by appointment</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Your Sign Shop · Hazel Green, Alabama · <a href="#services">Services</a> · <a href="#contact">Get a Quote</a>
+</footer>
+
+</body>
+</html>

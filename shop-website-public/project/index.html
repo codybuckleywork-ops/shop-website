@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signshop Dashboard — self-hosted production system for sign shops</title>
+<meta name="description" content="A free, self-hosted production dashboard for sign shops: job pipeline, inventory, weather-aware scheduling, backups, and daily email digests. Flask + SQLite, no subscription.">
+<style>
+:root{--ink:#101828;--ink2:#475467;--bg:#fff;--bg2:#f7f8fa;--brand:#2563eb;--ok:#059669;--radius:14px;--max:960px}
+*{box-sizing:border-box;margin:0}
+body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);line-height:1.65;background:var(--bg)}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+.hero{background:linear-gradient(160deg,#0b1220,#1e3a8a);color:#fff;text-align:center;padding:80px 20px}
+.hero .pill{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:5px 14px;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase}
+.hero h1{font-size:clamp(30px,5vw,48px);font-weight:800;letter-spacing:-.03em;margin-top:18px}
+.hero p{max-width:600px;margin:16px auto 0;font-size:17.5px;color:#c7d2fe}
+.hero .btns{margin-top:30px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;font-weight:600;padding:12px 26px;border-radius:999px}
+.btn.primary{background:#f59e0b;color:#0b1220}
+.btn.ghost{border:1px solid rgba(255,255,255,.4);color:#fff}
+section{padding:64px 0}
+section.alt{background:var(--bg2)}
+h2{font-size:clamp(22px,3vw,32px);font-weight:800;letter-spacing:-.02em;text-align:center}
+.lede{text-align:center;color:var(--ink2);max-width:620px;margin:12px auto 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-top:40px}
+.card{background:#fff;border:1px solid #eaecf0;border-radius:var(--radius);padding:24px;box-shadow:0 1px 2px rgba(16,24,40,.05)}
+.card h3{font-size:16px;margin:10px 0 6px}
+.card p{color:var(--ink2);font-size:14px}
+.card .ico{font-size:26px}
+pre{background:#0b1220;color:#c7d2fe;border-radius:var(--radius);padding:22px;overflow-x:auto;font-size:13.5px;line-height:1.7;margin-top:32px}
+pre b{color:#f59e0b;font-weight:600}
+.pipeline{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-top:36px}
+.stage{background:#fff;border:1px solid #eaecf0;border-radius:999px;padding:7px 16px;font-size:13.5px;font-weight:600}
+.stage.done{border-color:var(--ok);color:var(--ok)}
+.arrow{align-self:center;color:#98a2b3}
+footer{background:#0b1220;color:#93a4d8;text-align:center;padding:32px 20px;font-size:13.5px}
+footer a{color:#c7d2fe}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <span class="pill">Free · Self-hosted · No subscription</span>
+  <h1>Signshop Dashboard</h1>
+  <p>A production system for sign shops that runs on your own PC. Track every job from design to install, manage inventory, plan around the weather, and get a daily overview in your inbox.</p>
+  <div class="btns">
+    <a class="btn primary" href="https://github.com/codybuckleywork-ops/signshop-dashboard">View on GitHub</a>
+    <a class="btn ghost" href="#start">Quick start</a>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>Built around a real shop pipeline</h2>
+    <p class="lede">Every job moves through the same stages your shop floor does — advance it with a click or drag it on the board.</p>
+    <div class="pipeline">
+      <span class="stage done">Design</span><span class="arrow">→</span>
+      <span class="stage done">Print</span><span class="arrow">→</span>
+      <span class="stage done">Laminate</span><span class="arrow">→</span>
+      <span class="stage">Cut</span><span class="arrow">→</span>
+      <span class="stage">Mask</span><span class="arrow">→</span>
+      <span class="stage">Install</span><span class="arrow">→</span>
+      <span class="stage">Complete</span>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>Everything in one place</h2>
+    <div class="grid">
+      <div class="card"><div class="ico">📋</div><h3>Job tracking</h3><p>List, kanban board, week planner, and month calendar views. Customer-first cards, work-order printing, checklists, files &amp; proof approvals.</p></div>
+      <div class="card"><div class="ico">🌦️</div><h3>Weather-aware scheduling</h3><p>7-day forecast with install jobs pinned to their day, live radar, and warnings with real numbers — "rain likely (70%)" on install day, at the install location.</p></div>
+      <div class="card"><div class="ico">📦</div><h3>Inventory management</h3><p>Product codes, vendors, costs, reorder points with low-stock alerts, auto-deducting material usage, and paste-a-URL product autofill.</p></div>
+      <div class="card"><div class="ico">📧</div><h3>Daily email overview</h3><p>Overdue jobs, today's due &amp; installs, open tasks, and low stock — in your inbox every morning via your own Gmail.</p></div>
+      <div class="card"><div class="ico">🗓️</div><h3>CSV &amp; calendar import</h3><p>Sync jobs from spreadsheets or .ics calendar exports — re-imports update instead of duplicating.</p></div>
+      <div class="card"><div class="ico">🛟</div><h3>Automatic backups</h3><p>Full snapshots (database, files, and code) on startup, nightly, and before every import. One-click restore rolls everything back.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="start">
+  <div class="wrap">
+    <h2>Quick start</h2>
+    <p class="lede">Python 3.9+ is the only requirement. Your data lives in a local SQLite file — nothing leaves your machine.</p>
+    <pre><b>git clone</b> https://github.com/codybuckleywork-ops/signshop-dashboard.git
+<b>cd</b> signshop-dashboard
+<b>pip install</b> -r requirements.txt
+<b>python</b> SignshopDashboard.py
+<span style="color:#64748b"># open http://localhost:5000 — done.</span></pre>
+  </div>
+</section>
+
+<footer>
+  Flask + SQLite · MIT-spirited self-hosting · <a href="https://github.com/codybuckleywork-ops/signshop-dashboard">GitHub repo</a>
+</footer>
+
+</body>
+</html>
