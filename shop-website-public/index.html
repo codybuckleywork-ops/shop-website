@@ -4,145 +4,208 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Your Sign Shop — Custom Signs, Banners & Vehicle Graphics | Hazel Green, AL</title>
-<meta name="description" content="Custom signs, banners, vehicle graphics, and installations in Hazel Green, Alabama. Design to install, done right.">
+<meta name="description" content="Custom signs, banners, vehicle graphics, and installations in Hazel Green, Alabama. Instant ballpark pricing, design to install.">
 <style>
-:root{
-  --ink:#101828;--ink2:#475467;--ink3:#98a2b3;--bg:#ffffff;--bg2:#f7f8fa;
-  --brand:#1d4ed8;--brand-dark:#1e3a8a;--accent:#f59e0b;--radius:14px;
-  --max:1080px;
-}
+:root{--ink:#101828;--ink2:#475467;--ink3:#98a2b3;--bg:#fff;--bg2:#f7f8fa;--brand:#1d4ed8;--brand-dark:#1e3a8a;--accent:#f59e0b;--radius:14px;--max:1080px}
 *{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
 body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);line-height:1.6;background:var(--bg)}
 img{max-width:100%}
-a{color:var(--brand)}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
-header{position:sticky;top:0;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid #eaecf0;z-index:10}
-.nav{display:flex;align-items:center;gap:24px;padding:14px 20px;max-width:var(--max);margin:0 auto}
+header{position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid #eaecf0;z-index:20}
+.nav{display:flex;align-items:center;gap:22px;padding:14px 20px;max-width:var(--max);margin:0 auto}
 .logo{font-weight:800;font-size:19px;letter-spacing:-.02em;color:var(--ink);text-decoration:none}
 .logo span{color:var(--brand)}
-.nav a:not(.logo):not(.cta){color:var(--ink2);text-decoration:none;font-size:14.5px;font-weight:500}
-.nav a:hover:not(.logo):not(.cta){color:var(--ink)}
-.nav .spacer{flex:1}
-.cta{background:var(--brand);color:#fff;text-decoration:none;font-weight:600;font-size:14.5px;padding:9px 18px;border-radius:999px}
+.nav-links{display:flex;gap:22px;align-items:center;margin-left:auto}
+.nav-links a{color:var(--ink2);text-decoration:none;font-size:14.5px;font-weight:500}
+.nav-links a:hover{color:var(--ink)}
+.cta{background:var(--brand);color:#fff!important;font-weight:600;padding:9px 18px;border-radius:999px}
 .cta:hover{background:var(--brand-dark)}
-.hero{background:linear-gradient(160deg,#0b1220 0%,#1e3a8a 90%);color:#fff;padding:84px 20px 90px;text-align:center}
+.burger{display:none;margin-left:auto;background:none;border:none;font-size:26px;cursor:pointer;color:var(--ink)}
+.hero{background:linear-gradient(160deg,#0b1220 0%,#1e3a8a 90%);color:#fff;padding:88px 20px 94px;text-align:center;overflow:hidden}
 .hero h1{font-size:clamp(30px,5.5vw,52px);font-weight:800;letter-spacing:-.03em;line-height:1.12;max-width:760px;margin:0 auto}
 .hero h1 em{font-style:normal;color:var(--accent)}
 .hero p{margin:18px auto 0;max-width:560px;font-size:18px;color:#c7d2fe}
-.hero .cta{display:inline-block;margin-top:30px;font-size:16px;padding:13px 30px;background:var(--accent);color:#0b1220}
-.hero .cta:hover{filter:brightness(1.08)}
-.hero .sub{margin-top:14px;font-size:13px;color:#93a4d8}
-section{padding:70px 0}
+.hero .btn{display:inline-block;margin:30px 6px 0;font-size:16px;padding:13px 30px;border-radius:999px;text-decoration:none;font-weight:700}
+.b-solid{background:var(--accent);color:#0b1220}
+.b-line{border:1.5px solid rgba(255,255,255,.5);color:#fff}
+section{padding:72px 0}
 section.alt{background:var(--bg2)}
 h2{font-size:clamp(24px,3.5vw,34px);font-weight:800;letter-spacing:-.02em;text-align:center}
 .lede{text-align:center;color:var(--ink2);max-width:620px;margin:12px auto 0}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:44px}
 .card{background:#fff;border:1px solid #eaecf0;border-radius:var(--radius);padding:26px;box-shadow:0 1px 2px rgba(16,24,40,.04)}
-.alt .card{box-shadow:0 1px 3px rgba(16,24,40,.07)}
 .card .ico{font-size:28px}
 .card h3{margin:12px 0 6px;font-size:17px}
 .card p{color:var(--ink2);font-size:14.5px}
+/* estimator */
+.est{max-width:680px;margin:44px auto 0;background:#fff;border:1px solid #eaecf0;border-radius:var(--radius);padding:30px;box-shadow:0 4px 16px rgba(16,24,40,.07)}
+.est-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:14px}
+.est label{display:flex;flex-direction:column;gap:5px;font-size:12.5px;font-weight:600;color:var(--ink2)}
+.est input,.est select{font:inherit;padding:10px 12px;border:1px solid #d0d5dd;border-radius:9px}
+.est-out{margin-top:22px;text-align:center;background:var(--bg2);border-radius:12px;padding:18px}
+.est-price{font-size:34px;font-weight:800;color:var(--brand)}
+.est-note{font-size:12px;color:var(--ink3);margin-top:6px}
+/* gallery + lightbox */
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:44px}
+.shot{aspect-ratio:4/3;border-radius:var(--radius);background:linear-gradient(135deg,#e0e7ff,#f1f5f9);display:flex;align-items:center;justify-content:center;color:var(--ink3);font-size:13.5px;text-align:center;padding:12px;border:1px dashed #c7cede;cursor:zoom-in;transition:transform .15s}
+.shot:hover{transform:scale(1.02)}
+.lightbox{position:fixed;inset:0;background:rgba(10,15,26,.92);display:none;align-items:center;justify-content:center;z-index:50;cursor:zoom-out}
+.lightbox.open{display:flex}
+.lightbox .lb-body{max-width:88vw;max-height:82vh;background:#fff;border-radius:14px;padding:40px;font-size:18px;color:var(--ink2);text-align:center}
+/* faq */
+.faq{max-width:720px;margin:40px auto 0}
+.faq-item{border:1px solid #eaecf0;border-radius:12px;margin-bottom:10px;background:#fff;overflow:hidden}
+.faq-q{width:100%;text-align:left;font:inherit;font-weight:600;font-size:15px;padding:16px 18px;background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;gap:10px}
+.faq-q::after{content:"+";font-size:20px;color:var(--brand);transition:transform .2s}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease;color:var(--ink2);font-size:14.5px}
+.faq-a p{padding:0 18px 16px}
+.faq-item.open .faq-a{max-height:200px}
+/* steps + contact reused */
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-top:44px;counter-reset:step}
 .step{background:#fff;border:1px solid #eaecf0;border-radius:var(--radius);padding:22px;position:relative}
 .step::before{counter-increment:step;content:counter(step);position:absolute;top:-14px;left:18px;background:var(--brand);color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px}
 .step h3{font-size:15.5px;margin:8px 0 4px}
 .step p{color:var(--ink2);font-size:13.5px}
-.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:44px}
-.shot{aspect-ratio:4/3;border-radius:var(--radius);background:linear-gradient(135deg,#e0e7ff,#f1f5f9);display:flex;align-items:center;justify-content:center;color:var(--ink3);font-size:13.5px;text-align:center;padding:12px;border:1px dashed #c7cede}
 .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:44px;align-items:start}
 .contact-card{background:#fff;border:1px solid #eaecf0;border-radius:var(--radius);padding:28px}
 .contact-card h3{font-size:16px;margin-bottom:12px}
 .contact-card p{color:var(--ink2);font-size:14.5px;margin-bottom:8px}
-.contact-card strong{color:var(--ink)}
-form{display:flex;flex-direction:column;gap:12px}
-input,textarea,select{font:inherit;padding:11px 13px;border:1px solid #d0d5dd;border-radius:9px;width:100%}
-input:focus,textarea:focus,select:focus{outline:2px solid var(--brand);border-color:transparent}
-button{font:inherit;font-weight:600;background:var(--brand);color:#fff;border:none;border-radius:999px;padding:12px 24px;cursor:pointer}
-button:hover{background:var(--brand-dark)}
+form.quote{display:flex;flex-direction:column;gap:12px}
+form.quote input,form.quote textarea,form.quote select{font:inherit;padding:11px 13px;border:1px solid #d0d5dd;border-radius:9px;width:100%}
+form.quote button{font:inherit;font-weight:600;background:var(--brand);color:#fff;border:none;border-radius:999px;padding:12px 24px;cursor:pointer}
 .note{font-size:12.5px;color:var(--ink3)}
 footer{background:#0b1220;color:#93a4d8;padding:34px 20px;text-align:center;font-size:13.5px}
 footer a{color:#c7d2fe}
+.totop{position:fixed;right:18px;bottom:18px;background:var(--brand);color:#fff;border:none;border-radius:50%;width:46px;height:46px;font-size:20px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .25s;z-index:30}
+.totop.show{opacity:1;pointer-events:auto}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .5s ease,transform .5s ease}
+.reveal.in{opacity:1;transform:none}
 .placeholder{background:#fef3c7;border:1px solid #fcd34d;border-radius:9px;padding:10px 14px;font-size:13px;color:#92400e;max-width:var(--max);margin:14px auto 0}
-@media(max-width:640px){
-  .nav{gap:14px;flex-wrap:wrap}
-  .nav a:not(.logo):not(.cta){font-size:13px}
-  section{padding:50px 0}
+@media(max-width:760px){
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid #eaecf0;flex-direction:column;padding:16px;gap:14px}
+  .nav-links.open{display:flex}
+  .burger{display:block}
+  section{padding:52px 0}
 }
 </style>
 </head>
 <body>
 
-<div class="placeholder">⚠ Placeholder site — replace "Your Sign Shop", the phone number, email, and photo boxes with your real info, then delete this banner (it's the div class="placeholder" at the top of the file).</div>
+<div class="placeholder">⚠ Placeholder site — replace "Your Sign Shop", the phone number, email, estimator rates, and photo boxes with your real info, then delete this banner.</div>
 
 <header>
   <nav class="nav">
     <a class="logo" href="#">Your <span>Sign</span> Shop</a>
-    <span class="spacer"></span>
-    <a href="#services">Services</a>
-    <a href="#work">Our Work</a>
-    <a href="#process">Process</a>
-    <a href="#contact">Contact</a>
-    <a class="cta" href="#contact">Get a Quote</a>
+    <button class="burger" id="burger" aria-label="Menu">☰</button>
+    <div class="nav-links" id="nav-links">
+      <a href="#services">Services</a>
+      <a href="#estimate">Instant Estimate</a>
+      <a href="#work">Our Work</a>
+      <a href="#faq">FAQ</a>
+      <a class="cta" href="#contact">Get a Quote</a>
+    </div>
   </nav>
 </header>
 
 <section class="hero">
   <h1>Signs that get your business <em>noticed</em></h1>
   <p>Design, print, fabrication, and installation — all under one roof in Hazel Green, Alabama.</p>
-  <a class="cta" href="#contact">Request a Free Quote</a>
-  <div class="sub">Serving Hazel Green, Huntsville, and North Alabama</div>
+  <a class="btn b-solid" href="#estimate">⚡ Instant Ballpark Price</a>
+  <a class="btn b-line" href="#contact">Request a Quote</a>
 </section>
 
 <section id="services">
   <div class="wrap">
-    <h2>What we make</h2>
-    <p class="lede">From a single yard sign to a full storefront makeover — designed, produced, and installed by the same crew.</p>
+    <h2 class="reveal">What we make</h2>
+    <p class="lede reveal">From a single yard sign to a full storefront makeover — designed, produced, and installed by the same crew.</p>
     <div class="grid">
-      <div class="card"><div class="ico">💡</div><h3>Illuminated &amp; Channel Letters</h3><p>Lighted cabinet signs and channel letters that work as hard at night as they do in the day.</p></div>
-      <div class="card"><div class="ico">🏪</div><h3>Storefront &amp; Building Signs</h3><p>ACM, aluminum, acrylic, and MDO signage built to handle Alabama weather.</p></div>
-      <div class="card"><div class="ico">🚚</div><h3>Vehicle Graphics &amp; Wraps</h3><p>Turn every truck in your fleet into a billboard with cut vinyl or full wraps.</p></div>
-      <div class="card"><div class="ico">🎪</div><h3>Banners &amp; Event Signage</h3><p>Grand openings, festivals, job sites — fast turnaround banners and coroplast signs.</p></div>
-      <div class="card"><div class="ico">🪟</div><h3>Window &amp; Wall Graphics</h3><p>Frosted vinyl, hours lettering, wall murals, and interior branding.</p></div>
-      <div class="card"><div class="ico">🔧</div><h3>Installation &amp; Service</h3><p>Licensed installs, sign repairs, and re-faces — including signs we didn't make.</p></div>
+      <div class="card reveal"><div class="ico">💡</div><h3>Illuminated &amp; Channel Letters</h3><p>Lighted cabinet signs and channel letters that work as hard at night as they do in the day.</p></div>
+      <div class="card reveal"><div class="ico">🏪</div><h3>Storefront &amp; Building Signs</h3><p>ACM, aluminum, acrylic, and MDO signage built to handle Alabama weather.</p></div>
+      <div class="card reveal"><div class="ico">🚚</div><h3>Vehicle Graphics &amp; Wraps</h3><p>Turn every truck in your fleet into a billboard with cut vinyl or full wraps.</p></div>
+      <div class="card reveal"><div class="ico">🎪</div><h3>Banners &amp; Event Signage</h3><p>Grand openings, festivals, job sites — fast turnaround banners and coroplast signs.</p></div>
+      <div class="card reveal"><div class="ico">🪟</div><h3>Window &amp; Wall Graphics</h3><p>Frosted vinyl, hours lettering, wall murals, and interior branding.</p></div>
+      <div class="card reveal"><div class="ico">🔧</div><h3>Installation &amp; Service</h3><p>Licensed installs, sign repairs, and re-faces — including signs we didn't make.</p></div>
     </div>
   </div>
 </section>
 
-<section class="alt" id="process">
+<section class="alt" id="estimate">
   <div class="wrap">
-    <h2>How it works</h2>
-    <p class="lede">The same pipeline we run in the shop, from your first call to the finished install.</p>
+    <h2 class="reveal">Instant ballpark estimate</h2>
+    <p class="lede reveal">Slide the numbers around — real quotes follow a quick conversation, but this gets you in the neighborhood.</p>
+    <div class="est reveal">
+      <div class="est-grid">
+        <label>Sign type
+          <select id="e-type">
+            <option value="banner">Banner</option>
+            <option value="coroplast">Yard sign (coroplast)</option>
+            <option value="acm" selected>Rigid sign (ACM)</option>
+            <option value="acrylic">Acrylic</option>
+            <option value="vinyl">Vinyl lettering</option>
+          </select>
+        </label>
+        <label>Width (ft)<input type="number" id="e-w" value="4" min="1" max="50" step="0.5"></label>
+        <label>Height (ft)<input type="number" id="e-h" value="8" min="1" max="50" step="0.5"></label>
+        <label>Quantity<input type="number" id="e-qty" value="1" min="1" max="500"></label>
+      </div>
+      <div class="est-out">
+        <div class="est-price" id="e-price">$—</div>
+        <div id="e-detail" class="note"></div>
+        <div class="est-note">Ballpark only — materials, hardware, and installation vary. <a href="#contact">Get an exact quote →</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <h2 class="reveal">How it works</h2>
     <div class="steps">
-      <div class="step"><h3>Talk to us</h3><p>Tell us what you need — we'll quote it fast and straight.</p></div>
-      <div class="step"><h3>Design &amp; proof</h3><p>You approve exactly what will be made. No surprises.</p></div>
-      <div class="step"><h3>Print &amp; fabricate</h3><p>Produced in-house on commercial equipment.</p></div>
-      <div class="step"><h3>Install</h3><p>We schedule around the weather and do it right the first time.</p></div>
+      <div class="step reveal"><h3>Talk to us</h3><p>Tell us what you need — we'll quote it fast and straight.</p></div>
+      <div class="step reveal"><h3>Design &amp; proof</h3><p>You approve exactly what will be made. No surprises.</p></div>
+      <div class="step reveal"><h3>Print &amp; fabricate</h3><p>Produced in-house on commercial equipment.</p></div>
+      <div class="step reveal"><h3>Install</h3><p>We schedule around the weather and do it right the first time.</p></div>
     </div>
   </div>
 </section>
 
-<section id="work">
+<section class="alt" id="work">
   <div class="wrap">
-    <h2>Recent work</h2>
-    <p class="lede">Swap these placeholders with photos of your installs — customers buy what they can see.</p>
+    <h2 class="reveal">Recent work</h2>
+    <p class="lede reveal">Click any photo to enlarge. (Swap these placeholders with real install photos.)</p>
     <div class="gallery">
-      <div class="shot">📷 Photo: illuminated cabinet sign install</div>
-      <div class="shot">📷 Photo: fleet vehicle lettering</div>
-      <div class="shot">📷 Photo: storefront channel letters</div>
-      <div class="shot">📷 Photo: banner / event signage</div>
-      <div class="shot">📷 Photo: window graphics</div>
-      <div class="shot">📷 Photo: before &amp; after re-face</div>
+      <div class="shot" data-cap="Illuminated cabinet sign install">📷 Illuminated cabinet sign</div>
+      <div class="shot" data-cap="Fleet vehicle lettering">📷 Fleet vehicle lettering</div>
+      <div class="shot" data-cap="Storefront channel letters">📷 Storefront channel letters</div>
+      <div class="shot" data-cap="Banner / event signage">📷 Banner / event signage</div>
+      <div class="shot" data-cap="Window graphics">📷 Window graphics</div>
+      <div class="shot" data-cap="Before & after re-face">📷 Before &amp; after re-face</div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <h2 class="reveal">Common questions</h2>
+    <div class="faq reveal">
+      <div class="faq-item"><button class="faq-q">How fast can you turn a job around?</button><div class="faq-a"><p>Banners and yard signs often ship in 2–3 business days. Fabricated and illuminated signs typically run 2–4 weeks depending on permits and materials.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Do you handle permits?</button><div class="faq-a"><p>Yes — for permanent signage we can handle the local permitting process as part of the project.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Can you repair a sign you didn't make?</button><div class="faq-a"><p>Absolutely. Re-faces, lighting repairs, and refurbishments are a regular part of our week.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Do I need print-ready artwork?</button><div class="faq-a"><p>No — bring a logo, a sketch, or an idea. Design and proofing are part of the process, and nothing gets made until you approve the proof.</p></div></div>
+      <div class="faq-item"><button class="faq-q">What area do you serve?</button><div class="faq-a"><p>Hazel Green, Huntsville, and the surrounding North Alabama area. Ask about jobs further out.</p></div></div>
     </div>
   </div>
 </section>
 
 <section class="alt" id="contact">
   <div class="wrap">
-    <h2>Get a quote</h2>
-    <p class="lede">Tell us about your project and we'll get back to you within one business day.</p>
+    <h2 class="reveal">Get a quote</h2>
+    <p class="lede reveal">Tell us about your project and we'll get back to you within one business day.</p>
     <div class="contact-grid">
-      <div class="contact-card">
-        <form action="mailto:codybuckleywork@gmail.com" method="get" enctype="text/plain">
+      <div class="contact-card reveal">
+        <form class="quote" action="mailto:codybuckleywork@gmail.com" method="get" enctype="text/plain">
           <input type="text" name="name" placeholder="Your name" required>
           <input type="text" name="phone" placeholder="Phone">
           <input type="email" name="email" placeholder="Email" required>
@@ -158,10 +221,10 @@ footer a{color:#c7d2fe}
           </select>
           <textarea name="details" rows="4" placeholder="Tell us about the project — size, location, timeline…"></textarea>
           <button type="submit">Send quote request</button>
-          <p class="note">This opens your email app. For a real inline form, connect a free service like Formspree — one line to change.</p>
+          <p class="note">This opens your email app. Want an inline form? Connect a free Formspree account — one line to change.</p>
         </form>
       </div>
-      <div class="contact-card">
+      <div class="contact-card reveal">
         <h3>Visit or call</h3>
         <p><strong>Your Sign Shop</strong><br>123 Main Street<br>Hazel Green, AL 35750</p>
         <p><strong>Phone:</strong> (256) 555-0100<br><strong>Email:</strong> codybuckleywork@gmail.com</p>
@@ -171,9 +234,60 @@ footer a{color:#c7d2fe}
   </div>
 </section>
 
-<footer>
-  © 2026 Your Sign Shop · Hazel Green, Alabama · <a href="#services">Services</a> · <a href="#contact">Get a Quote</a>
-</footer>
+<footer>© 2026 Your Sign Shop · Hazel Green, Alabama · <a href="#services">Services</a> · <a href="#estimate">Instant Estimate</a> · <a href="#contact">Get a Quote</a></footer>
 
+<div class="lightbox" id="lightbox"><div class="lb-body" id="lb-body"></div></div>
+<button class="totop" id="totop" aria-label="Back to top">↑</button>
+
+<script>
+// mobile nav
+const burger = document.getElementById('burger');
+const links = document.getElementById('nav-links');
+burger.addEventListener('click', () => links.classList.toggle('open'));
+links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+
+// instant estimator — EDIT THESE RATES to match your real pricing ($/sqft)
+const RATES = { banner: 8, coroplast: 10, acm: 18, acrylic: 28, vinyl: 12 };
+const MIN_CHARGE = 45;
+function estimate() {
+  const t = document.getElementById('e-type').value;
+  const w = parseFloat(document.getElementById('e-w').value) || 0;
+  const h = parseFloat(document.getElementById('e-h').value) || 0;
+  const q = Math.max(1, parseInt(document.getElementById('e-qty').value) || 1);
+  const sqft = w * h;
+  let each = Math.max(MIN_CHARGE, sqft * RATES[t]);
+  // simple quantity break: 10% off 5+, 20% off 20+
+  const disc = q >= 20 ? 0.8 : q >= 5 ? 0.9 : 1;
+  const lo = each * q * disc;
+  const hi = lo * 1.35; // range accounts for finishing/hardware options
+  document.getElementById('e-price').textContent =
+    `$${Math.round(lo).toLocaleString()} – $${Math.round(hi).toLocaleString()}`;
+  document.getElementById('e-detail').textContent =
+    `${q} × ${w}′×${h}′ (${sqft.toFixed(1)} sq ft each)` + (disc < 1 ? ` · quantity discount applied` : '');
+}
+['e-type','e-w','e-h','e-qty'].forEach(id => document.getElementById(id).addEventListener('input', estimate));
+estimate();
+
+// gallery lightbox
+const lb = document.getElementById('lightbox');
+const lbBody = document.getElementById('lb-body');
+document.querySelectorAll('.shot').forEach(s => s.addEventListener('click', () => {
+  lbBody.textContent = '📷 ' + s.dataset.cap + ' — replace this placeholder with a real photo.';
+  lb.classList.add('open');
+}));
+lb.addEventListener('click', () => lb.classList.remove('open'));
+
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(q => q.addEventListener('click', () => {
+  q.parentElement.classList.toggle('open');
+}));
+
+// scroll reveal + back-to-top
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); }), { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+const totop = document.getElementById('totop');
+addEventListener('scroll', () => totop.classList.toggle('show', scrollY > 600));
+totop.addEventListener('click', () => scrollTo({ top: 0, behavior: 'smooth' }));
+</script>
 </body>
 </html>
