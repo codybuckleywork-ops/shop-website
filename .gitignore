@@ -1,14 +1,33 @@
-# local data — never commit the shop's live database or settings
-dashboard.db
-config.json
-tokens.json
+# =============================================================================
+# This repo publishes ONLY the public website (shop-website-public/) to
+# GitHub Pages. Everything else in this folder is the PRIVATE self-hosted
+# dashboard and its data — it must never be pushed here.
+# These rules make `git add .` safe: it can only pick up website files.
+# =============================================================================
 
-# python
+# --- private dashboard code ---
+/SignshopDashboard.py
+/app.py
+/static/
+/templates/
+/requirements.txt
+/setup-autostart.ps1
+
+# --- private repo clone + demo kit (their own repos / not for Pages) ---
+/repo/
+/demo/
+
+# --- live data & secrets (NEVER publish) ---
+/config.json
+/dashboard.db
+/tokens.json
+/uploads/
+/backups/
+
+# --- python / editor / os junk ---
 __pycache__/
 *.pyc
 .venv/
 venv/
-
-# os / editor
 .DS_Store
 Thumbs.db
