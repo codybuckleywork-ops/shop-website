@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Sign Shop — Custom Signs, Banners & Vehicle Graphics | Hazel Green, AL</title>
-<meta name="description" content="Custom signs, banners, vehicle graphics, and installations in Hazel Green, Alabama. Instant ballpark pricing, design to install.">
+<title>Your Sign Shop — Custom Signs, Banners & Vehicle Graphics</title>
+<meta name="description" content="Custom signs, banners, vehicle graphics, and installations. Instant ballpark pricing, design to install.">
 <style>
 :root{--ink:#101828;--ink2:#475467;--ink3:#98a2b3;--bg:#fff;--bg2:#f7f8fa;--brand:#1d4ed8;--brand-dark:#1e3a8a;--accent:#f59e0b;--radius:14px;--max:1080px}
 *{box-sizing:border-box;margin:0}
@@ -111,7 +111,7 @@ footer a{color:#c7d2fe}
 
 <section class="hero">
   <h1>Signs that get your business <em>noticed</em></h1>
-  <p>Design, print, fabrication, and installation — all under one roof in Hazel Green, Alabama.</p>
+  <p>Design, print, fabrication, and installation — all under one roof, serving <span class="geo-area">your area</span>.</p>
   <a class="btn b-solid" href="#estimate">⚡ Instant Ballpark Price</a>
   <a class="btn b-line" href="#contact">Request a Quote</a>
 </section>
@@ -194,7 +194,7 @@ footer a{color:#c7d2fe}
       <div class="faq-item"><button class="faq-q">Do you handle permits?</button><div class="faq-a"><p>Yes — for permanent signage we can handle the local permitting process as part of the project.</p></div></div>
       <div class="faq-item"><button class="faq-q">Can you repair a sign you didn't make?</button><div class="faq-a"><p>Absolutely. Re-faces, lighting repairs, and refurbishments are a regular part of our week.</p></div></div>
       <div class="faq-item"><button class="faq-q">Do I need print-ready artwork?</button><div class="faq-a"><p>No — bring a logo, a sketch, or an idea. Design and proofing are part of the process, and nothing gets made until you approve the proof.</p></div></div>
-      <div class="faq-item"><button class="faq-q">What area do you serve?</button><div class="faq-a"><p>Hazel Green, Huntsville, and the surrounding North Alabama area. Ask about jobs further out.</p></div></div>
+      <div class="faq-item"><button class="faq-q">What area do you serve?</button><div class="faq-a"><p><span class="geo-area">Your area</span> and the surrounding region. Ask about jobs further out.</p></div></div>
     </div>
   </div>
 </section>
@@ -205,7 +205,7 @@ footer a{color:#c7d2fe}
     <p class="lede reveal">Tell us about your project and we'll get back to you within one business day.</p>
     <div class="contact-grid">
       <div class="contact-card reveal">
-        <form class="quote" action="mailto:codybuckleywork@gmail.com" method="get" enctype="text/plain">
+        <form class="quote" action="mailto:quotes@yoursignshop.com" method="get" enctype="text/plain">
           <input type="text" name="name" placeholder="Your name" required>
           <input type="text" name="phone" placeholder="Phone">
           <input type="email" name="email" placeholder="Email" required>
@@ -226,15 +226,15 @@ footer a{color:#c7d2fe}
       </div>
       <div class="contact-card reveal">
         <h3>Visit or call</h3>
-        <p><strong>Your Sign Shop</strong><br>123 Main Street<br>Hazel Green, AL 35750</p>
-        <p><strong>Phone:</strong> (256) 555-0100<br><strong>Email:</strong> codybuckleywork@gmail.com</p>
+        <p><strong>Your Sign Shop</strong><br>[Street address]<br><span class="geo-area">[City, State ZIP]</span></p>
+        <p><strong>Phone:</strong> (256) 555-0100<br><strong>Email:</strong> quotes@yoursignshop.com</p>
         <p><strong>Hours:</strong><br>Mon–Fri 8am–5pm<br>Sat by appointment</p>
       </div>
     </div>
   </div>
 </section>
 
-<footer>© 2026 Your Sign Shop · Hazel Green, Alabama · <a href="#services">Services</a> · <a href="#estimate">Instant Estimate</a> · <a href="#contact">Get a Quote</a></footer>
+<footer>© 2026 Your Sign Shop · <span class="geo-area">your area</span> · <a href="#services">Services</a> · <a href="#estimate">Instant Estimate</a> · <a href="#contact">Get a Quote</a></footer>
 
 <div class="lightbox" id="lightbox"><div class="lb-body" id="lb-body"></div></div>
 <button class="totop" id="totop" aria-label="Back to top">↑</button>
@@ -267,6 +267,14 @@ function estimate() {
 }
 ['e-type','e-w','e-h','e-qty'].forEach(id => document.getElementById(id).addEventListener('input', estimate));
 estimate();
+
+// Localize the service area to the visitor (IP-based, silent fallback).
+fetch('https://ipapi.co/json/').then(r => r.json()).then(d => {
+  if (d && d.city) {
+    const label = d.city + (d.region_code ? ', ' + d.region_code : '');
+    document.querySelectorAll('.geo-area').forEach(el => el.textContent = label);
+  }
+}).catch(() => {});
 
 // gallery lightbox
 const lb = document.getElementById('lightbox');
